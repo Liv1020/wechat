@@ -56,8 +56,10 @@ class Cache
      * 默认的缓存写入器
      *
      * @param string $key
-     * @param mixed  $value
-     * @param int    $lifetime
+     * @param mixed $value
+     * @param int $lifetime
+     * @return mixed
+     * @throws Exception
      */
     public function set($key, $value, $lifetime = 7200)
     {
@@ -79,7 +81,8 @@ class Cache
      * 默认的缓存读取器
      *
      * @param string $key
-     * @param mixed  $default
+     * @param mixed $default
+     * @return mixed|null
      */
     public function get($key, $default = null)
     {
@@ -105,6 +108,7 @@ class Cache
     /**
      * 删除缓存
      *
+     * @param $key
      * @return bool
      */
     public function forget($key)
