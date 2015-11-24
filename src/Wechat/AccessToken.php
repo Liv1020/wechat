@@ -103,8 +103,6 @@ class AccessToken
     /**
      * Get the access token from WeChat server.
      *
-     * @param string $cacheKey
-     *
      * @return array|bool
      */
     protected function getTokenFromServer()
